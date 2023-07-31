@@ -1,5 +1,4 @@
 --[[
-
 Nome da criatura
 Descrição
 Som que faz
@@ -12,7 +11,6 @@ Atributos:
     Habilidades
     Furtividade
     Explosão
-
 ====================================================
 /
 / CREEPER 
@@ -27,8 +25,6 @@ Atributos:
 /
 /
 ====================================================
-
-
 ]]
 
 --Habilitar UTF-8 no terminal
@@ -38,9 +34,9 @@ os.execute("chcp 65001")
 local monsterName = "Pikachu"
 local description = "Movimentos rápidos como um interruptor volt e carregados como um capacitor"
 local emoji = "⚡"
-local sound = "Pikachu"
+local sound = "Pika-chu"
 local favoriteTime = "Noite"
-local power = "Raio do trovão"
+local power = "Choque do trovão"
 
 -- Atributos
 local attackAttribute = 7
@@ -51,8 +47,8 @@ local inteligenceAttribute = 8
 
 -- função que recebe um atributo e nos retorna uma barra de progresso em string / texto
 local function getProgressBar(attribute)
-    local fullChar = "⬜"
-    local emptyChar = "⬛"
+    local fullChar = "💚"
+    local emptyChar = "🤍"
     
     local result = ""
     for i = 1, 10, 1 do
@@ -69,21 +65,21 @@ end
 -- Cartão
 print("=============================================================================")
 print("| ")
-print("| " .. monsterName)
+print("|  ⚡" .. monsterName .. "⚡")
 print("| ")
 print("| " .. description)
 print("| ")
-print("| Habilidade:       " .. power)
-print("| Som:              " .. sound)
-print("| Emoji Favorito:   " .. emoji)
-print("| Horário Favorito: " .. favoriteTime)
+print("|    Habilidade:       " .. power)
+print("|    Som:              " .. sound)
+print("|    Emoji Favorito:   " .. emoji)
+print("|    Horário Favorito: " .. favoriteTime)
 print("| ")
 print("| ")
-print("| Atributos")
+print("| Atributos:")
 print("|    Ataque:        " .. getProgressBar(attackAttribute))
 print("|    Defesa:        " .. getProgressBar(defenseAttribute))
 print("|    Vida:          " .. getProgressBar(lifeAttribute))
 print("|    Velocidade:    " .. getProgressBar(speedAttribute))
-print("|    Intenligencia: " .. getProgressBar(inteligenceAttribute))
+print("|    Inteligência:  " .. getProgressBar(inteligenceAttribute))
 print("| ")
 print("=============================================================================")
